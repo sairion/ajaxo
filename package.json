@@ -1,6 +1,6 @@
 {
   "name": "ajaxo",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A small promise-based ajax utility with declarative configuration",
   "main": "dist/lib.js",
   "scripts": {
