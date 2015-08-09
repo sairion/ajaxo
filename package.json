@@ -1,12 +1,15 @@
 {
   "name": "ajaxo",
   "version": "0.0.1",
-  "description": "A small ajax utility with declarative configuration",
+  "description": "A small promise-based ajax utility with declarative configuration",
   "main": "index.js",
   "scripts": {
+    "test-functional": "",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "",
     "build-release": "",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "",
+    "lint-flow": ""
   },
   "author": {
     "name": "Jaeho Lee",
@@ -25,7 +28,33 @@
   "devDependencies": {
     "babel": "^5.8.21",
     "babel-core": "^5.8.21",
+    "babel-eslint": "^4.0.5",
     "babel-loader": "^5.3.2",
-    "webpack": "^1.11.0"
-  }
+    "chai": "^3.2.0",
+    "eslint": "^1.1.0",
+    "flow-bin": "^0.14.0",
+    "karma": "^0.13.8",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-mocha": "^0.2.0",
+    "karma-sinon": "^1.0.4",
+    "karma-webpack": "^1.7.0",
+    "mocha": "^2.2.5",
+    "sinon": "^1.15.4",
+    "webpack": "^1.11.0",
+    "webpack-dev-server": "^1.10.1"
+  },
+  "tags": [
+    "promise",
+    "ajax",
+    "xhr",
+    "request",
+    "es2015"
+  ],
+  "keywords": [
+    "promise",
+    "ajax",
+    "xhr",
+    "request",
+    "es2015"
+  ]
 }
