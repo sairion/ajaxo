@@ -6,10 +6,10 @@
   "scripts": {
     "test-functional": "",
     "test": "karma start",
-    "build": "",
-    "build-release": "",
-    "lint": "",
-    "lint-flow": ""
+    "build": "webpack --progress --profile --colors --watch --display-error-details",
+    "build-release": "webpack --progress --profile --colors --display-error-details",
+    "lint": "eslint lib/*.js test/*.js && npm run lint-flow",
+    "lint-flow": "flow"
   },
   "author": {
     "name": "Jaeho Lee",
