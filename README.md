@@ -1,7 +1,6 @@
 # Ajaxo - A Simple Ajax Wrapper (WIP)
 
-Ajaxo is a promise-based Ajax wrapper with simple configurations, built with modern JavaScript technology.
-More docs and examples will come.
+Ajaxo is a promise-based Ajax wrapper with simple configurations, built with modern JavaScript technology. More docs and examples is coming.
 
 ```javascript
 // api.js
@@ -25,4 +24,10 @@ API.report()
     .catch(xhr => {
         ...
     });
+```
+
+## Import dist lib or ES2015 version
+If you are willing to use pre-compiled ES2015 src directly, import from `ajaxo/lib` instead like:
+```javascript
+import {APIBuilder} from 'ajaxo/lib/api';
 ```
