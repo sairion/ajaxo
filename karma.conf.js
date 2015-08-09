@@ -1,3 +1,5 @@
+var webpack = require('./webpack.config.js');
+
 module.exports = function(config) {
     var ci = !!process.env.ENV_CI;
 
@@ -5,7 +7,7 @@ module.exports = function(config) {
         basePath: '.',
         frameworks: ['mocha', 'sinon'],
         files: [
-          'test/**/*.spec.js'
+            'test/**/*.spec.js'
         ],
         preprocessors: {
             'test/**/*.spec.js': ['webpack']
@@ -15,11 +17,13 @@ module.exports = function(config) {
             'karma-chrome-launcher',
             'karma-webpack',
             'karma-sinon',
+            'karma-spec-reporter'
         ],
+        webpack: webpack,
         browsers: ['Chrome'],
         browserNoActivityTimeout: 30000,
         port: 9876,
-        reporters: ['dots'],
+        reporters: ['spec'],
         autoWatch: !ci,
         singleRun: ci,
         logLevel: config.LOG_DEBUG,

@@ -4,7 +4,6 @@
   "description": "A small promise-based ajax utility with declarative configuration",
   "main": "dist/lib.js",
   "scripts": {
-    "test-functional": "",
     "test": "karma start",
     "build": "webpack --progress --profile --colors --watch --display-error-details",
     "build-release": "webpack --progress --profile --colors --display-error-details",
@@ -37,11 +36,11 @@
     "karma-chrome-launcher": "^0.2.0",
     "karma-mocha": "^0.2.0",
     "karma-sinon": "^1.0.4",
+    "karma-spec-reporter": "0.0.20",
     "karma-webpack": "^1.7.0",
     "mocha": "^2.2.5",
     "sinon": "^1.15.4",
-    "webpack": "^1.11.0",
-    "webpack-dev-server": "^1.10.1"
+    "webpack": "^1.11.0"
   },
   "tags": [
     "promise",
