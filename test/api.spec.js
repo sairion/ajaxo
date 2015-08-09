@@ -1,12 +1,6 @@
 import {assert} from 'chai';
 import {APIBase, APIBuilder} from '../lib/index';
 
-var definitions = {
-    report: {
-        url: '/report/<%= id %>',
-        type: 'POST',
-    }
-};
 
 describe('APIBase', function () {
     it('should initialize with given options', function () {
@@ -24,5 +18,37 @@ describe('APIBase', function () {
 });
 
 describe('APIBuilder', function () {
+
+    var definitions = {
+        report: {
+            url: '/report/<%= id %>',
+            type: 'POST',
+        }
+    };
+
+    var fakeServer = sinon.fakeServer.create();
     var API = APIBuilder(definitions);
+
+    afterEach(() => {
+        fakeServer.restore();
+    });
+
+    it('should make correct ajax request', function () {
+        var expected = { 'ajaxo_is': 'awesome' };
+        fakeServer.respondWith(
+            'POST',
+            /\/report\/(\d+)/,
+            [
+                200,
+                { "Content-Type": "application/json" },
+                JSON.stringify(expected)
+            ]
+        );
+        var promise = API.report().resolveWith({ id: 1 }).post();
+        fakeServer.respond();
+
+        return promise.then(response => {
+            assert.deepEqual(response, expected);
+        });
+    });
 });
