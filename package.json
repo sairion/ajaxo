@@ -2,7 +2,7 @@
   "name": "ajaxo",
   "version": "0.0.1",
   "description": "A small promise-based ajax utility with declarative configuration",
-  "main": "index.js",
+  "main": "dist/lib.js",
   "scripts": {
     "test-functional": "",
     "test": "echo \"Error: no test specified\" && exit 1",
