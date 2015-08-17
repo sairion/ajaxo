@@ -17,7 +17,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "jquery": "^2.1.4",
+    "isomorphic-fetch": "^2.1.1",
     "lodash": "^3.10.1"
   },
   "repository": {
@@ -32,6 +32,7 @@
     "chai": "^3.2.0",
     "eslint": "^1.1.0",
     "flow-bin": "^0.14.0",
+    "json-loader": "^0.5.2",
     "karma": "^0.13.8",
     "karma-chrome-launcher": "^0.2.0",
     "karma-mocha": "^0.2.0",
